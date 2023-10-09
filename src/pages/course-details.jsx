@@ -5,24 +5,24 @@ import WrapperFour from "../layout/wrapper-4";
 
 
 
-const index = (props) => {
-	console.log(props);
+const index = ({relatedCourses}) => {
+	
   return (
     <WrapperFour>
       <SEO pageTitle={"Course Details"} />
       <CourseDetails 
-			props={props}
+			relatedCourses={relatedCourses}
 			/>
     </WrapperFour>
   );
 };
 
 export async function getStaticProps() {
-	const res = await fetch('http://localhost:5000/course');	
+	const res = await fetch('http://localhost:5000/related-courses');	
 	const data = await res.json();
 	console.log(data);
 	return {
-		props: { data }
+		props: { relatedCourses:data }
 	}
 }
 

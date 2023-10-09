@@ -1,10 +1,11 @@
 import our_course_data from "@/src/data/our-course-data";
 import Link from "next/link";
 import React from "react";
-import Course from "../course/course";
+// import Course from "../course/course";
 
-const CourseArea = (props) => {
-	console.log(props)
+const CourseArea = ({relatedCourses}) => {
+	// console.log(relatedCourses.id)
+	
   return (
     <>
       <section className="course-area mb-80">
@@ -17,25 +18,25 @@ const CourseArea = (props) => {
             </div>
           </div>
           <div className="row">
-						<Course />
-            {our_course_data.slice(0, 3).map((item, i) => (
-              <div key={i} className="col-xl-4 col-lg-6 col-md-6">
+						{/* <Course relatedCourses={relatedCourses} /> */}
+            {relatedCourses.map((relatedCourses) => (
+              <div key={relatedCourses.id} className="col-xl-4 col-lg-6 col-md-6">
                 <div
                   className="tpcourse mb-40 wow fadeInUp"
                   data-wow-duration=".8s"
                   data-wow-delay=".3s"
                 >
                   <div className="tpcourse__thumb p-relative w-img fix">
-                    <Link href={item.course_link}>
-                      <img src={item.img} alt="course-thumb" />
+                    <Link href={relatedCourses.course_link}>
+                      <img src={relatedCourses.img} alt="course-thumb" />
                     </Link>
                     <div className="tpcourse__tag">
-                      <Link href={item.course_link}>
+                      <Link href={relatedCourses.course_link}>
                         <i className="fi fi-rr-heart"></i>
                       </Link>
                     </div>
                     <div className="tpcourse__img-icon">
-                      <img src={item.icon} alt="course-avata" />
+                      <img src={relatedCourses.icon} alt="course-avata" />
                     </div>
                   </div>
                   <div className="tpcourse__content-2">
@@ -43,25 +44,25 @@ const CourseArea = (props) => {
                       <ul className="tpcourse__price-list d-flex align-items-center">
                         <li>
                           <Link
-                            className={item.ct_color}
-                            href={item.course_link}
+                            className={relatedCourses.ct_color}
+                            href={relatedCourses.course_link}
                           >
-                            {item.course_title}
+                            {relatedCourses.course_title}
                           </Link>
                         </li>
                         <li>
                           <Link
-                            className={item.cn_color}
-                            href={item.course_link}
+                            className={relatedCourses.cn_color}
+                            href={relatedCourses.course_link}
                           >
-                            {item.course_name}
+                            {relatedCourses.course_name}
                           </Link>
                         </li>
                       </ul>
                     </div>
                     <div className="tpcourse__ava-title mb-15">
                       <h4 className="tpcourse__title tp-cours-title-color">
-                        <Link href={item.course_link}>{item.title}</Link>
+                        <Link href={relatedCourses.course_link}>{relatedCourses.title}</Link>
                       </h4>
                     </div>
                     <div className="tpcourse__meta tpcourse__meta-gap pb-15 mb-15">
@@ -71,29 +72,29 @@ const CourseArea = (props) => {
                             src="/assets/img/icon/c-meta-01.png"
                             alt="meta-icon"
                           />{" "}
-                          <span>{item.cls_text}</span>
+                          <span>{relatedCourses.cls_text}</span>
                         </li>
                         <li>
                           <img
                             src="/assets/img/icon/c-meta-02.png"
                             alt="meta-icon"
                           />{" "}
-                          <span>{item.st_text}</span>
+                          <span>{relatedCourses.st_text}</span>
                         </li>
                       </ul>
                     </div>
                     <div className="tpcourse__rating d-flex align-items-center justify-content-between">
                       <div className="tpcourse__rating-icon">
-                        <span>{item.start_text}</span>
+                        <span>{relatedCourses.start_text}</span>
                         <i className="fi fi-ss-star"></i>
                         <i className="fi fi-ss-star"></i>
                         <i className="fi fi-ss-star"></i>
                         <i className="fi fi-ss-star"></i>
                         <i className="fi fi-rs-star"></i>
-                        <p>({item.total_start})</p>
+                        <p>({relatedCourses.total_start})</p>
                       </div>
                       <div className="tpcourse__pricing">
-                        <h5 className="price-title">${item.course_price}</h5>
+                        <h5 className="price-title">${relatedCourses.course_price}</h5>
                       </div>
                     </div>
                   </div>

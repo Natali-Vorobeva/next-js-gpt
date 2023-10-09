@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "json-server": "json-server --watch courseDB.json --port 5000",
+    "json-server": "json-server --watch related-coursesDB.json --port 5000",
     "serve": "concurrently \"npm run dev\" \"npm run json-server\""
   },
   "dependencies": {

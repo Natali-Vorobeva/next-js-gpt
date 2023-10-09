@@ -5,12 +5,13 @@ import CounterArea from "../homes/home-3/counter-area";
 import CourseArea from "./course-area";
 import CourseDetailsArea from "./course-details-area";
 
-const CourseDetails = (props) => {
+const CourseDetails = ({relatedCourses}) => {
+	
   return (
     <>
       <Breadcrumb title="Course Details" subtitle="Course Details" isDbbl="Course" />
       <CourseDetailsArea />
-      <CourseArea props={props} />
+      <CourseArea relatedCourses={relatedCourses} />
       <CounterArea />
     </>
   );
