@@ -1,8 +1,10 @@
 import our_course_data from "@/src/data/our-course-data";
 import Link from "next/link";
 import React from "react";
+import Course from "../course/course";
 
-const CourseArea = () => {
+const CourseArea = (props) => {
+	console.log(props)
   return (
     <>
       <section className="course-area mb-80">
@@ -15,6 +17,7 @@ const CourseArea = () => {
             </div>
           </div>
           <div className="row">
+						<Course />
             {our_course_data.slice(0, 3).map((item, i) => (
               <div key={i} className="col-xl-4 col-lg-6 col-md-6">
                 <div

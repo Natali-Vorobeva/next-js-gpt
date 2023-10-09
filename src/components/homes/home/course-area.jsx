@@ -1,7 +1,7 @@
 import course_data from "@/src/data/course-data";
 import Link from "next/link";
 import React from "react";
-import Course from "./course";
+import Course from "../../course/course";
 
 const CourseArea = () => {
 

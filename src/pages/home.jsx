@@ -12,36 +12,24 @@ import TestimonialArea from "../components/homes/home/testimonial-area";
 import BlogArea from "../components/homes/home/blog-area";
 import BrandArea from "../common/brand-area";
 
-export async function getStaticProps() {
-	const res = await fetch('http://localhost:5000/course');	
-	const data = await res.json();
-	console.log(res);
-	return {
-		props: { data }
-	}
-}
+const Home = () => {
 
-export default function Home({data}) {
-	
-	console.log('props >>>', data)
-
-  return (
-    <>		 
-      <HeroBanner />
-      <FeatureArea />
-      <AboutArea />
-      <CategoryArea />
-      <CourseArea />
-      <ChooseArea />
-      <CounterArea />
-      <InstructorArea />
-      <SuitableArea />
-      <TestimonialArea />
-      <BlogArea />
-      <BrandArea style_1={true} />
-    </>
-  );
+	return (
+		<>
+			<HeroBanner />
+			<FeatureArea />
+			<AboutArea />
+			<CategoryArea />
+			<CourseArea />
+			<ChooseArea />
+			<CounterArea />
+			<InstructorArea />
+			<SuitableArea />
+			<TestimonialArea />
+			<BlogArea />
+			<BrandArea style_1={true} />
+		</>
+	);
 };
 
-
-
+export default Home;
