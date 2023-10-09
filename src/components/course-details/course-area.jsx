@@ -1,10 +1,7 @@
-import our_course_data from "@/src/data/our-course-data";
 import Link from "next/link";
 import React from "react";
-// import Course from "../course/course";
 
 const CourseArea = ({relatedCourses}) => {
-	// console.log(relatedCourses.id)
 	
   return (
     <>
@@ -18,7 +15,6 @@ const CourseArea = ({relatedCourses}) => {
             </div>
           </div>
           <div className="row">
-						{/* <Course relatedCourses={relatedCourses} /> */}
             {relatedCourses.map((relatedCourses) => (
               <div key={relatedCourses.id} className="col-xl-4 col-lg-6 col-md-6">
                 <div

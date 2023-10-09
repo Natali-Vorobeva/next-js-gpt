@@ -1191,7 +1191,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
+  animation-name: fadeInUp;	
+}
+
+.hover-card {
+	transition: all 1s ease;
+}
+
+.hover-card:hover {
+	transition: all 1s ease;
+	transform: scale(1.05);
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	
 }
 
 @-webkit-keyframes fadeInUpBig {

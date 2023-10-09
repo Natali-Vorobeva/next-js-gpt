@@ -1,7 +1,6 @@
 import course_data from "@/src/data/course-data";
 import Link from "next/link";
 import React from "react";
-import Course from "../../course/course";
 
 const CourseArea = () => {
 
@@ -23,14 +22,6 @@ const CourseArea = () => {
 						</div>
 					</div>
 					<div className="row justify-content-center">
-
-						<Course />
-						{/* !-------------------------------------------------------------------
-						
-						
-						
-						
-						*/}
 						{course_data.map((item) => (
 							<div key={item.id} className="col-xl-4 col-lg-6 col-md-6">
 								<div className="tpcourse mb-40">

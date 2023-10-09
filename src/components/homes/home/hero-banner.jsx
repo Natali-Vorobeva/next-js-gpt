@@ -10,7 +10,7 @@ const HeroBanner = () => {
                <div className="row">
                   <div className="col-xl-6 col-lg-6 col-md-8">
                      <div className="hero-content">
-                        <span>Learn New Skills & Popular Courses</span>
+                        <span className='animation'>Learn New Skills & Popular Courses</span>
                         <h2 className="hero-title mb-35">For Every Student, Every <i>Classroom</i>.</h2>
                         <p>Dramatically supply transparent deliverables before backward<br />comp internal or "organic"
                            sources. Competently leverage other.</p>
