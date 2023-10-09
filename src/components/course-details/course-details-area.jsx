@@ -1,6 +1,5 @@
 import review_content from '@/src/data/review-data';
 import Link from 'next/link';
-import OpenAI from 'openai';
 import { useState } from 'react';
 import AboutInstructor from '../about-instructor/about-instructor';
 import AboutCourse from '../course/about-course';

@@ -1,30 +1,35 @@
 import React from "react";
+import AboutCourseOnline from "../../course/about-course-on-line";
 
 const feature_content = [
   {
     id: 1,
     icon: "fi fi-rr-paper-plane",
     title: "Online Courses",
-    des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+		// des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+    des: <AboutCourseOnline/>,
   },
   {
     id: 2,
     icon: "fi fi-rr-user",
     title: "Expert Trainer",
-    des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+		des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+		// des: <AboutCourseOnline/>,		
   },
 
   {
     id: 3,
     icon: "fi fi-rr-document",
     title: "Get Certificate",
-    des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+    des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",		
+		// des: <AboutCourseOnline/>,		
   },
   {
     id: 4,
     icon: "fi fi-rr-calendar",
     title: "Life Time Access",
     des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+		// des: <AboutCourseOnline/>,		
   },
 ];
 
@@ -59,10 +64,12 @@ const FeatureArea = () => {
                       <i className={item.icon}></i>
                     </div>
                     <div className="tpfea__text">
-                      <h5 className="tpfea__title mb-20">{item.title}</h5>
-                      <p>
+                      <h5 className="tpfea__title mb-20">
+												{item.title}
+												</h5>
+                      <div>
                         {item.des}
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>

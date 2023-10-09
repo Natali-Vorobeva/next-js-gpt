@@ -2,12 +2,12 @@
 import { useTextBuffer, StreamingText } from "nextjs-openai";
 import { useEffect, useRef, useState } from "react";
 
-export default function AboutCourse() {
+export default function AboutCourseOnline() {
 	const nameRef = useRef(null);
-	const [data, setData] = useState({ name: "Web Design in Adobe XD" });
+	const [data, setData] = useState({ name: "online courses" });
 	
 	const { buffer, done, error, refresh, cancel } = useTextBuffer({
-		url: "/api/course",
+		url: "/api/course-online",
 		throttle: 100,
 		options: {
 			method: "POST",
@@ -23,13 +23,13 @@ export default function AboutCourse() {
 		[]
 	);
 
-	// const setName = () => {
-	// 	const name = nameRef?.current?.value;
-	// 	if (name) {
-	// 		setData((data) => ({ ...data, name }));
-	// 		refresh();
-	// 	}
-	// };
+	const setName = () => {
+		const name = nameRef?.current?.value;
+		if (name) {
+			setData((data) => ({ ...data, name }));
+			refresh();
+		}
+	};
 
 	return (
 		<div>			
